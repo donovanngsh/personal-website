@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donovan NG - Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <nav class="glass">
+                <div class="logo">Donovan NG</div>
+                <ul>
+                    <li><a href="#" data-page="home">Home</a></li>
+                    <li><a href="#" data-page="about">About</a></li>
+                    <li><a href="#" data-page="projects">Projects</a></li>
+                    <li><a href="#" data-page="contact">Contact</a></li>
+                </ul>
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </nav>
+        </header>
+
+        <main id="main-content">
+            <!-- Content will be dynamically loaded here -->
+            <div class="loader"></div>
+        </main>
+
+        <!-- Template for Home Page -->
+        <template id="home-template">
+            <section class="hero">
+                <div class="hero-content fade-in">
+                    <h1>Hi, I'm Donovan NG</h1>
+                    <p class="subtitle">Software Engineer | Tech Innovator</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <a href="#" class="cta-button" data-page="contact">Get In Touch</a>
+                </div>
+            </section>
+        </template>
+
+        <!-- Template for About Page -->
+        <template id="about-template">
+            <section class="about container fade-in">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <div class="about-text glass">
+                        <p>Hello! I'm a passionate software engineer with a keen interest in building innovative technological solutions. My expertise lies in creating efficient, scalable, and user-friendly applications that solve real-world problems.</p>
+                        <p>I'm constantly learning and exploring new technologies to stay at the cutting edge of software development.</p>
+                    </div>
+                    <div class="skills glass">
+                        <h3>Technologies I Work With</h3>
+                        <div class="skill-tags">
+                            <span>Python</span>
+                            <span>JavaScript</span>
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>Docker</span>
+                            <span>Cloud Computing</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+
+        <!-- Template for Projects Page -->
+        <template id="projects-template">
+            <section class="projects container fade-in">
+                <h2>My Projects</h2>
+                <div class="project-grid">
+                    <div class="project-card glass">
+                        <h3>Project 1</h3>
+                        <p>A brief description of an innovative project you've worked on.</p>
+                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="project-card glass">
+                        <h3>Project 2</h3>
+                        <p>Another exciting project that showcases your skills and creativity.</p>
+                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="project-card glass">
+                        <h3>Project 3</h3>
+                        <p>A unique solution that demonstrates your problem-solving abilities.</p>
+                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </section>
+        </template>
+
+        <!-- Template for Contact Page -->
+        <template id="contact-template">
+            <section class="contact container fade-in">
+                <h2>Contact Me</h2>
+                <form class="contact-form glass">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit" class="cta-button">Send Message</button>
+                </form>
+            </section>
+        </template>
+
+        <footer class="glass">
+            <p>&copy; 2023 Donovan NG. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
